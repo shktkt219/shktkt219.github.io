@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  The road to being creative
-date:   2016-05-17 19:56:14 +0000
+title:  The road to Creativity
+date:   2016-05-17 15:56:14 -0400
 ---
 
 
