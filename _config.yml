@@ -1,10 +1,10 @@
 # Site settings
-title: Learn programming
+title: The Road to Creativity
 header-img: img/home-bg.png
 email: shktkt219@gmail.com
 copyright_name: shktkt219
 description: > # this means to ignore newlines until "baseurl:"
-  my tracks
+  Learn programming
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  shktkt219
