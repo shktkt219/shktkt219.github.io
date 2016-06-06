@@ -12,7 +12,7 @@ I read news about Uber's APIs recently. I have read this kind of news that a com
 
 
 
-# APIs: Entrances to the code.
+**APIs: Entrances to the code.**
 
 API stands for application programming interface. An API is essentially a way for programmers to communicate with a certain application. On your desktop, an API is what lets some applications talk to others or access features of the operating system. 
 
@@ -25,7 +25,7 @@ http://sproutsocial.com/insights/what-is-an-api/
 
 
 
-# Example of an API : Google Maps APIs
+**Example of an API : Google Maps APIs**
 
 
 ![](http://cdn.liginc.co.jp/wp-content/uploads/2015/01/482.png)
