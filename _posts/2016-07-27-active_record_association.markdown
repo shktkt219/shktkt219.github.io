@@ -5,7 +5,7 @@ date:   2016-07-27 17:57:18 -0400
 ---
 
 
-# Why Associations?
+** Why Associations?**
 
 Do you know the reason why do we need associations between models? That's because they make common operations simpler and easier in our code. For instance, there is a simple application that includes a model for customers and a model for orders. Each customer can have many orders. Without associations, the model would look like this.
 
@@ -89,7 +89,7 @@ In order to implement these relationships we will need to do two things:
 This time, taking a closer look at belongs_to, has_many, and has_many :through associations.
 
 
-#  Create a music playing app
+**Create a music playing app**
 
 We'll be building a domain model for a music playing app. This app has three models: Artists, Songs, and Genres. The relationships between artists, songs, and genres will be following:
 
@@ -179,7 +179,8 @@ After running *rake db:migrate* in your terminal, create files for models. Defin
   end    
 ```
 
-# Code in action
+
+**Code in action**
 
 Our associations are working because of our migrations and use of AR macros. Playing around with our code in *rake console*.
 
