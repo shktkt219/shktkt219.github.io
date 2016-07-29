@@ -142,7 +142,7 @@ Migration files like this.
   end
 ```
 
-After running `rake db:migrate ` in your terminal, create files for models. Define all classes to inherit from *ActiveRecord::Base*. We will be using the following ActiveRecord macros.
+After running `rake db:migrate ` in your terminal, create files for models. Define all classes to inherit from `ActiveRecord::Base`. We will be using the following ActiveRecord macros.
 
 * has_many
 * has_many through
@@ -178,6 +178,7 @@ After running `rake db:migrate ` in your terminal, create files for models. Defi
     has_many :artists, through: :songs
   end    
 ```
+
 
 
 # Code in action
