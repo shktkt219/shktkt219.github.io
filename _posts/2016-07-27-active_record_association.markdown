@@ -5,7 +5,7 @@ date:   2016-07-27 17:57:18 -0400
 ---
 
 
-** Why Associations?**
+#  Why Associations?
 
 Do you know the reason why do we need associations between models? That's because they make common operations simpler and easier in our code. For instance, there is a simple application that includes a model for customers and a model for orders. Each customer can have many orders. Without associations, the model would look like this.
 
@@ -82,14 +82,14 @@ There are the different types of associations.
 In order to implement these relationships we will need to do two things:
 
 
-1. Write a migration that creates tables with associations. For example, if a dog belongs to an owner, the dogs table should have an *owner_id* column.
+1. Write a migration that creates tables with associations. For example, if a dog belongs to an owner, the dogs table should have an `owner_id` column.
 2. Use Active Record macros in the models.
 
 
-This time, taking a closer look at belongs_to, has_many, and has_many :through associations.
+This time, taking a closer look at `belongs_to`, `has_many`, and `has_many :through` associations.
 
 
-**Create a music playing app**
+# Create a music playing app
 
 We'll be building a domain model for a music playing app. This app has three models: Artists, Songs, and Genres. The relationships between artists, songs, and genres will be following:
 
@@ -102,7 +102,7 @@ We'll be building a domain model for a music playing app. This app has three mod
 Migration files like this.
 
 
-*db/migrate/01_create_songs.rb*
+`db/migrate/01_create_songs.rb`
 
 ```
   class CreateSongs < ActiveRecord::Migration
@@ -117,7 +117,7 @@ Migration files like this.
 ```
 
 
-*db/migrate/02_create_artists.rb*
+`db/migrate/02_create_artists.rb`
 
 ```
   class CreateArtists < ActiveRecord::Migration
@@ -130,7 +130,7 @@ Migration files like this.
 ```
 
 
-*db/migrate/03_create_genres.rb*
+`db/migrate/03_create_genres.rb`
 
 ```
   class CreateGenres < ActiveRecord::Migration
@@ -142,7 +142,7 @@ Migration files like this.
   end
 ```
 
-After running *rake db:migrate* in your terminal, create files for models. Define all classes to inherit from *ActiveRecord::Base*. We will be using the following ActiveRecord macros.
+After running `rake db:migrate ` in your terminal, create files for models. Define all classes to inherit from *ActiveRecord::Base*. We will be using the following ActiveRecord macros.
 
 * has_many
 * has_many through
@@ -150,7 +150,7 @@ After running *rake db:migrate* in your terminal, create files for models. Defin
 
 
 
-*song.rb*
+`song.rb`
 
 ```
   class Song < ActiveRecord::Base
@@ -160,7 +160,7 @@ After running *rake db:migrate* in your terminal, create files for models. Defin
 ```
 
 
-*artist.rb*
+`artist.rb`
 
 ```
   class Artist < ActiveRecord::Base
@@ -170,7 +170,7 @@ After running *rake db:migrate* in your terminal, create files for models. Defin
 ```
 
 
-*genre.rb*
+`genre.rb`
 
 ```
   class Genre < ActiveRecord::Base
@@ -180,9 +180,9 @@ After running *rake db:migrate* in your terminal, create files for models. Defin
 ```
 
 
-**Code in action**
+# Code in action
 
-Our associations are working because of our migrations and use of AR macros. Playing around with our code in *rake console*.
+Our associations are working because of our migrations and use of AR macros. Playing around with our code in `rake console`.
 
 Making a few new songs.
 
@@ -192,27 +192,27 @@ Now, we have two songs. Next, we will make some artists to associate them to.
 
 ![](http://i.imgur.com/cmnGOnS.png)
 
-An individual song has an *artist_id*. AR macros we implemented in our classes allow us to associate a song object directly to an artist object:
+An individual song has an `artist_id`. AR macros we implemented in our classes allow us to associate a song object directly to an artist object:
 
 ![](http://i.imgur.com/1UCjn3n.png)
 
-We can do the same for *dont_mind* and *kent_jones*.
+We can do the same for `dont_mind` and `kent_jones`.
 
 ![](http://i.imgur.com/SjM3Vm4.png)
 
-We can also ask our artists what songs they have. Making the second song for *daichi_miura*.
+We can also ask our artists what songs they have. Making the second song for `daichi_miura`.
 
 ![](http://i.imgur.com/JTOhhjQ.png)
 
-But, when we ask *daichi_miura* for his songs, his collection of songs will be empty. That's because the model that *has_many* is considered the parent. The model that *belongs_to* is considered the child. If we tell the child that it belongs to the parent, **the parent won't know about that relationship.** If we tell the parent that a certain child object has been added to its collection, **both the parent and the child will know about the association.**
+But, when we ask `daichi_miura` for his songs, his collection of songs will be empty. That's because the model that `has_many` is considered the parent. The model that `belongs_to` is considered the child. If we tell the child that it belongs to the parent, **the parent won't know about that relationship.** If we tell the parent that a certain child object has been added to its collection, **both the parent and the child will know about the association.**
 
-Let's see this with creating another new song and add it to *daichi_miura*'s songs collection:
+Let's see this with creating another new song and add it to `daichi_miura`'s songs collection:
 
 ![](http://i.imgur.com/EyI5I5f.png)
 
-We added *cry_and_fight* to *daichi_miura*'s collection of songs and we can see the *daichi_miura* knows it has that song in the collection and *cry_and_fight* knows about its artist.
+We added `cry_and_fight` to `daichi_miura`'s collection of songs and we can see the `daichi_miura` knows it has that song in the collection and `cry_and_fight` knows about its artist.
 
-*daichi_miura.songs* returns an array of songs. When a model *has_many* of something, it will store those objects in an array.
+`daichi_miura.songs` returns an array of songs. When a model `has_many` of something, it will store those objects in an array.
 
 Let's add some genres to our has many through association.
 
