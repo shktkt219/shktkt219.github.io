@@ -105,7 +105,6 @@ Migration files like this.
 *db/migrate/01_create_songs.rb*
 
 ```
-
   class CreateSongs < ActiveRecord::Migration
     def change
       create_table :songs do |t|
@@ -114,15 +113,13 @@ Migration files like this.
         t.integer :genre_id
       end
     end
-  end
-    
+  end    
 ```
 
 
 *db/migrate/02_create_artists.rb*
 
 ```
-
   class CreateArtists < ActiveRecord::Migration
     def change
       create_table :artists do |t|
@@ -130,14 +127,12 @@ Migration files like this.
       end
     end
   end
-
 ```
 
 
 *db/migrate/03_create_genres.rb*
 
 ```
-
   class CreateGenres < ActiveRecord::Migration
     def change
       create_table :genres do |t|
@@ -145,7 +140,6 @@ Migration files like this.
       end
     end
   end
-
 ```
 
 After running *rake db:migrate* in your terminal, create files for models. Define all classes to inherit from *ActiveRecord::Base*. We will be using the following ActiveRecord macros.
@@ -159,36 +153,30 @@ After running *rake db:migrate* in your terminal, create files for models. Defin
 *song.rb*
 
 ```
-
   class Song < ActiveRecord::Base
     belongs_to :artist
     belongs_to :genre
-  end
-    
+  end   
 ```
 
 
 *artist.rb*
 
 ```
-
   class Artist < ActiveRecord::Base
     has_many :songs
     has_many :genres, through: :songs
-  end
-    
+  end   
 ```
 
 
 *genre.rb*
 
 ```
-
   class Genre < ActiveRecord::Base
     has_many :songs
     has_many :artists, through: :songs
-  end
-    
+  end    
 ```
 
 # Code in action
