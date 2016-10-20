@@ -30,6 +30,7 @@ Must translate the JSON responses into Javascript Model Objects. The Model Objec
 I decided to use the handlebars format. It was good for me to omit cumbersome handmade codes.
 
 app/assets/javascripts/item.js
+
 ```
 $(function(){
   Item.templateSource = $("#item-template").html()
@@ -38,6 +39,7 @@ $(function(){
 ``` 
 
 app/views/items/new.html.erb
+
 ```
 <script id="item-template" type="text/x-handlebars-template">
    <h3 class="item_name">{{item_name}}</h3>
@@ -60,6 +62,8 @@ It's very easy to handle the handlebar, but too simple to use it, so I was confu
 
 My javascript codes here.
 app/assets/javascripts/item.js
+
+
 ```
 function Item(item){
   this.item_name = item.item_name;
