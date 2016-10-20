@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Extending Rails App by adding a JSON API"
-date:   2016-10-19 16:21:18 +0000
+date:   2016-10-19 12:21:18 -0400
 ---
 
 
@@ -96,3 +96,4 @@ $(function(){
 ```
 
 My github repo is [here](https://github.com/shktkt219/Meowbox_app).
+
