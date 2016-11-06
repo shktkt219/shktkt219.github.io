@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Extending Rails App by adding a JSON API (new Item show feature)"
-date:   2016-11-06 06:04:39 +0000
+date:   2016-11-06 01:04:39 -0500
 ---
 
 
@@ -17,10 +17,10 @@ At first, add "item-tag" class in the item link.
 
 <ul>
     <% @box.items.each do |item| %>
-			 <li>
-				 <%= link_to item.item_name, box_item_path(@box, item), class: "item-tag"%> | 
-				 <%= item.size %>
-			 </li>
+		 <li>
+		 <%= link_to item.item_name, box_item_path(@box, item), class: "item-tag"%> | 
+		 <%= item.size %>
+		 </li>
     <% end %>
   </ul>
 	
