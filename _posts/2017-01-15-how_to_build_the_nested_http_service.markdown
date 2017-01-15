@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to build the "nested" $http service"
+title:  "How to build the nested $http service"
 date:   2017-01-15 10:38:01 -0500
 ---
 
