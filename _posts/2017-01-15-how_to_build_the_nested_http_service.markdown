@@ -15,14 +15,13 @@ In my final project, I built a todo list app which has the nested $http service.
 
 I had built the Dashboard page using $http service. $http service is the low level so I had to implement Read, Create,  and Delete actions by myself. 
 
+*$q : A service that helps you run functions asynchronously, and use their return values (or exceptions) when they are done processing.
+
 
 *TodoListService.js*
 ```
 
 'use strict';
-
-// $q : A service that helps you run functions asynchronously,
-// and use their return values (or exceptions) when they are done processing.
 
 angular
   .module('todoApp')
