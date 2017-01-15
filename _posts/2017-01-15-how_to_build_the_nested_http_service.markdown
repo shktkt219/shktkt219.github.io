@@ -19,9 +19,8 @@ I had built the Dashboard page using $http service. $http service is the low lev
 
 
 *TodoListService.js*
-```
 
-'use strict';
+```
 
 angular
   .module('todoApp')
@@ -77,14 +76,13 @@ angular
 	
 ```
 
+
 Then I built DashboardCtrl.js using TodoListService.js. 
 
 
 *DashboardCtrl.js*
 
 ```
-
-'use strict';
 
 angular
   .module('todoApp')
@@ -137,6 +135,7 @@ angular
 	
 ```
 
+
 It was simple! 
 
 Next, I tried to build Create, Update, and Delete functions which have "nested" $http requests in TodoService.js. But I stuck with it. How to implement the nested $http request in the codes? I searched a lot but I found only about the CRUD app with $resource service.
@@ -145,11 +144,11 @@ ummm...
 
 After trial and error over and over again, I've finally built the $http service. I got hints from the deleteTodoList function in TodoListService.js, I added two or three arguments the $http service in TodoService.js.
 
+
+
 *TodoService.js*
 
 ```
-
-'use strict';
 
 angular
    .module('todoApp')
@@ -194,7 +193,9 @@ angular
 
 ```
 
+
 I stuck with how to interpret the parent id, so I solved the problem to set that as an argument. For example, The createTodoList function in TodoListService.js has taken an argument, the list data in that function, on the other hand, The createTodo function in TodoService.js has taken two arguments, the todo data and the parent id in that function. 
+
 
 
 *The createTodoList function in TodoListService.js*
@@ -266,8 +267,6 @@ angular
 Then I built TodoListCtrl.js using TodoService.js. 
 
 ```
-
-'use strict';
 
 angular
   .module('todoApp')
