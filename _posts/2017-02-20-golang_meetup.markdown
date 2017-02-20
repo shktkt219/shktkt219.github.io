@@ -32,6 +32,7 @@ Do you want to build "hello"? You can build it the only typing `go build hello.g
 
 ![](http://i.imgur.com/0DHD9kW.png)
 
+You can play Golang at [The Go Playground](https://play.golang.org/).
 # Conclusion
 I don't know so much about syntaxes of Golang, but I'm interested in learning new programming languages and enjoyed the experiences of Golang. I will stay tune the meetup about Golang.  
 
