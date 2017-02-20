@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Golang Meetup"
-date:   2017-02-20 00:57:23 +0000
+date:   2017-02-19 19:57:24 -0500
 ---
 
 
@@ -28,7 +28,7 @@ Then, input `go run hello.go` in your terminal.
 
 You can see "Hello World" in the terminal! That's the reason that Go's compilation is much easier than the other compiled languages.
 
-Do you want to buid "hello"? You can buid it only typying `go build hello.go`.
+Do you want to build "hello"? You can build it the only typing `go build hello.go`.
 
 ![](http://i.imgur.com/0DHD9kW.png)
 
